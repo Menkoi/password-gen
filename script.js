@@ -1,24 +1,18 @@
-// Assignment code here
-var characterAmountRange = document.getElementById
-('characterAmountRange')
+// getting element fron HTML //
 var characterAmountNumber = document.getElementById
 ('characterAmountNumber')
 var includeUppercaseElement = document.getElementById
 ('includeUpperCase')
-var includeLowercaseElement = document.getElementById
-("includeLowerCase")
 var includeNumberElement = document.getElementById
 ("includeNumbers")
 var includeSymbolsElement = document.getElementById
 ("includeSymbols")
 var form = document.getElementById
-("passwordGeneratorForm")
+("#generate")
 var PasswordDisplay = document.getElementById
 ("password")
-var generateBtn = document.getElementById
-("#generate");
 
-// CHARARCTER CODES //
+// Character codes to list  //
 var UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 var LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
 var NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
@@ -33,16 +27,10 @@ var SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
 // EVENT LISTENERS //
 characterAmountNumber.addEventListener("input", syncCharacterAmount)
 
-includeUppercaseElement.addEventListener("click", includeUppercaseElement)
-includeLowercaseElement.addEventListener("click", includeLowercaseElement)
-includeNumberElement.addEventListener("click", includeNumberElement)
-includeSymbolsElement.addEventListener("click", includeSymbolsElement)
-
 form.addEventListener("click", e => {
   e.preventDefault()
   characterAmount = characterAmountNumber.value
   includeUppercase = includeUppercaseElement.checked
-  includeLowercase = includeLowercaseElement.checked
   includeNumber = includeNumberElement.checked
   includeSymbols = includeSymbolsElement.checked
   var password = generatePassword(characterAmount, includeUppercase, includeNumber, includeSymbols)
@@ -55,6 +43,7 @@ function generatePassword(characterAmount, includeUppercase, includeNumber, incl
   if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
   if (includeNumber) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
 
+  // Adding the randomizer for the string of values //
   var passwordText = []
   for (let i = 0; i <characterAmount; i++) {
     characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
@@ -62,6 +51,7 @@ function generatePassword(characterAmount, includeUppercase, includeNumber, incl
   }
   return passwordText.join("")
 }
+
 
 function arrayFromLowToHigh(low, high) {
   var array = []
@@ -78,17 +68,4 @@ function syncCharacterAmount(e) {
 };
 
 
-// Get references to the #generate element
-//var generateBtn = document.getElementById("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword(characterAmount, includeUppercase, includeNumber, includeSymbols);
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
