@@ -52,7 +52,6 @@ function generatePassword(characterAmount, includeUppercase, includeNumber, incl
   return passwordText.join("")
 }
 
-
 function arrayFromLowToHigh(low, high) {
   var array = []
   for(let i = low; i <= high; i++) {
