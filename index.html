@@ -15,27 +15,35 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+
           <!--form starts-->
-          <form name="generator">
-            <input id="uppercase" type="checkbox" name="uppercase" checked="checked">
-            <label for="uppercase">Uppercase</label><br>
+        <form id="passwordGeneratorForm" class="form">
 
-            <input id="lowercase" type="checkbox" name="lowercase" checked="checked">
-            <label for="lowercase">Lowercase</label><br>
+          <label for="characterAmountNumber">Number Of Characters</label>
+        <div class="character-amount-container">
+          
+          <input type="number" min="1" max="50" value="10" 
+          id="characterAmountNumber"><br>
 
-            <input id="numbers" type="checkbox" name="numbers" checked="checked">
-            <label for="numbers">Numbers</label><br>
-
-            <input id="symbols" type="checkbox" name="symbols" checked="checked">
-            <label for="symbols">Symbols</label><br>
-
-            Password Length: <input type="text" name="Length" value="10"><br>
-            No. of passwords: <input type="text" name="count" value="10"><br>
-
-          </form>
         </div>
+
+          <label for="includeUpperCase">Include Uppercase</label>
+          <input type="checkbox" id="includeUpperCase"><br>
+
+          <label for="includeLowerCase">Include Lowercase</label>
+          <input type="checkbox" id="includeLowerCase"><br>
+
+          <label for="includeNumbers">Include Numbers</label>
+          <input type="checkbox" id="includeNumbers"><br>
+
+          <label for="includeSymbols">Include Symbols</label>
+          <input type="checkbox" id="includeSymbols"><br>
+
+        </form>
+
         <div class="card-body">
           <textarea
+          class="password"
             readonly
             id="password"
             placeholder="Your Secure Password"
@@ -43,7 +51,7 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button type="#generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
