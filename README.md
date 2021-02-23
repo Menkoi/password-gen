@@ -1,5 +1,4 @@
-<a href="https://imgur.com/26Tj3u2"><img src="https://i.imgur.com/26Tj3u2.png" title="source: imgur.com" /></a>
-
+<img src="https://i.imgur.com/cwLTOc4.png"/></a>
 # Password Generator 
 This is a password generator that can generate a custom length and uses the entire character codes!
 
@@ -15,5 +14,7 @@ https://menkoi.github.io/password-gen/
 <a href="https://imgur.com/jRQvFqE"><img src="https://i.imgur.com/jRQvFqE.png" title="source: imgur.com" /></a>
 
 <a href="https://imgur.com/WEetwZV"><img src="https://i.imgur.com/WEetwZV.png" title="source: imgur.com" /></a>
+
+Made with ❤️ by Brandon Burton 
 
 
